@@ -139,5 +139,5 @@ LOGIN_URL = '/login/'
 
 LOGIN_REDIRECT_URL = 'clientes_list'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
