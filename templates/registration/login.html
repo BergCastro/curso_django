@@ -1,6 +1,21 @@
-<h2>Login</h2>
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Seja bem-vindo! {% endblock %}
+{% block main %}
+ <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button typeof="submit">Login</button>
+        {{ form|bootstrap}}
+        <button typeof="submit" class="btn btn-primary">Login</button>
     </form>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Desenvolvimento web com Django 2.x</span>
+      </div>
+    </footer>
+{% endblock %}

@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clientes Cadastro</title>
-</head>
-<body>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Salvar</button>
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Confirmação {% endblock %}
+{% block main %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|bootstrap }}
+        <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
-</body>
-</html>
+{% endblock %}
